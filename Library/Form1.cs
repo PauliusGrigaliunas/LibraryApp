@@ -133,5 +133,16 @@ namespace Library
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormRegistration form = new FormRegistration();
+            form.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

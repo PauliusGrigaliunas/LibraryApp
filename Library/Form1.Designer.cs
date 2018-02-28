@@ -124,6 +124,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button3
             // 
@@ -162,12 +163,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(211, 468);
+            this.button1.Location = new System.Drawing.Point(195, 468);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 32);
+            this.button1.Size = new System.Drawing.Size(107, 32);
             this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
+            this.button1.Text = "Registruotis";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
