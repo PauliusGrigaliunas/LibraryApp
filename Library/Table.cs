@@ -15,11 +15,8 @@ namespace Library
     public partial class Table
     {
         public int Id { get; set; }
-        public string Autorius { get; set; }
-        public string Pavadinimas { get; set; }
-        public Nullable<int> Zmogus { get; set; }
-        public Nullable<System.DateTime> Grazinimo_Laikas { get; set; }
-    
-        public virtual Vartotojai Vartotojai { get; set; }
+        public string Prisijungimo_vardas { get; set; }
+        public string Slaptažodis { get; set; }
+        public int Vartotojas { get; set; }
     }
 }

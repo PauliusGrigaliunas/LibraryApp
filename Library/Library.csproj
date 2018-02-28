@@ -82,10 +82,16 @@
     <Compile Include="FormRegistration.Designer.cs">
       <DependentUpon>FormRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Knygo.cs">
+      <DependentUpon>LibDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="KnygosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>KnygosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KnygosDataSet1.cs">
+      <DependentUpon>KnygosDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="KnygosDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -97,6 +103,21 @@
     </Compile>
     <Compile Include="KurjerioForma.Designer.cs">
       <DependentUpon>KurjerioForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibDataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="ModelKnygoss.Context.cs">
@@ -115,7 +136,7 @@
       <DependentUpon>ModelKnygoss.edmx</DependentUpon>
     </Compile>
     <Compile Include="Table.cs">
-      <DependentUpon>ModelKnygoss.tt</DependentUpon>
+      <DependentUpon>LibDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Vartotojai.cs">
@@ -182,6 +203,13 @@
     <None Include="KnygosDataSet1.xss">
       <DependentUpon>KnygosDataSet1.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="LibDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LibDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LibDataModel.edmx.diagram">
+      <DependentUpon>LibDataModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -224,6 +252,16 @@
     <Content Include="Knygos_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Knygos.mdf</DependentUpon>
+    </Content>
+    <Content Include="LibDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibDataModel.edmx</DependentUpon>
+      <LastGenOutput>LibDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="LibDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibDataModel.edmx</DependentUpon>
+      <LastGenOutput>LibDataModel.cs</LastGenOutput>
     </Content>
     <Content Include="ModelKnygoss.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
