@@ -25,7 +25,7 @@ namespace Library
 
         private void SkaitytojoLangas_Load(object sender, EventArgs e)
         {
-            this.tableTableAdapter.FillByZmogus(this.knygosDataSet1.Table);
+            tableTableAdapter.FillByZmogus(this.knygosDataSet1.Table);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
