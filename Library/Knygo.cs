@@ -17,7 +17,7 @@ namespace Library
         public int Id { get; set; }
         public string Autorius { get; set; }
         public string Pavadinimas { get; set; }
-        public Nullable<int> Žmogus { get; set; }
-        public Nullable<System.DateTime> Grąžinimo_laikas { get; set; }
+        public Nullable<int> Zmogus { get; set; }
+        public Nullable<System.DateTime> Gražinimo_laikas { get; set; }
     }
 }

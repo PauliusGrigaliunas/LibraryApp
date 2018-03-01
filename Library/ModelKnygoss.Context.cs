@@ -25,7 +25,7 @@ namespace Library
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Table> Tables { get; set; }
+        public virtual DbSet Tables { get; set; }
         public virtual DbSet<Vartotojai> Vartotojais { get; set; }
     }
 }

@@ -83,7 +83,7 @@
       <DependentUpon>FormRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Knygo.cs">
-      <DependentUpon>LibDataModel.tt</DependentUpon>
+      <DependentUpon>Library.tt</DependentUpon>
     </Compile>
     <Compile Include="KnygosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -119,6 +119,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LibDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Library.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Library.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Library.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Library.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Library.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Library.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="ModelKnygoss.Context.cs">
       <AutoGen>True</AutoGen>
@@ -135,12 +150,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelKnygoss.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Table.cs">
-      <DependentUpon>LibDataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Vartotojai.cs">
-      <DependentUpon>ModelKnygoss.tt</DependentUpon>
+      <DependentUpon>Library.tt</DependentUpon>
     </Compile>
     <Compile Include="SkaitytojoLangas.cs">
       <SubType>Form</SubType>
@@ -210,6 +222,13 @@
     <None Include="LibDataModel.edmx.diagram">
       <DependentUpon>LibDataModel.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Library.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Library.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Library.edmx.diagram">
+      <DependentUpon>Library.edmx</DependentUpon>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -262,6 +281,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>LibDataModel.edmx</DependentUpon>
       <LastGenOutput>LibDataModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Library.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Library.edmx</DependentUpon>
+      <LastGenOutput>Library.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Library.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Library.edmx</DependentUpon>
+      <LastGenOutput>Library.cs</LastGenOutput>
     </Content>
     <Content Include="ModelKnygoss.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

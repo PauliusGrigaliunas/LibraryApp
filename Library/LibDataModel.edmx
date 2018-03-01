@@ -12,21 +12,21 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Autorius" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Pavadinimas" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Žmogus" Type="int" />
-          <Property Name="Grąžinimo laikas" Type="date" />
+          <Property Name="Zmogus" Type="int" />
+          <Property Name="Gražinimo laikas" Type="date" />
         </EntityType>
-        <EntityType Name="Table">
+        <EntityType Name="Vartotojai">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Prisijungimo vardas" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Slaptažodis" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Slaptazodis" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Vartotojas" Type="int" Nullable="false" />
         </EntityType>
         <EntityContainer Name="LibraryDataModelStoreContainer">
           <EntitySet Name="Knygos" EntityType="Self.Knygos" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vartotojai" EntityType="Self.Vartotojai" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -40,45 +40,45 @@
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Autorius" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Pavadinimas" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Žmogus" Type="Int32" />
-          <Property Name="Grąžinimo_laikas" Type="DateTime" Precision="0" />
+          <Property Name="Zmogus" Type="Int32" />
+          <Property Name="Gražinimo_laikas" Type="DateTime" Precision="0" />
         </EntityType>
-        <EntityType Name="Table">
+        <EntityType Name="Vartotojai">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Prisijungimo_vardas" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Slaptažodis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Slaptazodis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Vartotojas" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="LibraryDataEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="LibraryDataEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Knygos" EntityType="Self.Knygo" />
-          <EntitySet Name="Tables" EntityType="Self.Table" />
+          <EntitySet Name="Vartotojais" EntityType="Self.Vartotojai" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="LibraryDataModelStoreContainer" CdmEntityContainer="LibraryDataEntities">
+        <EntityContainerMapping StorageEntityContainer="LibraryDataModelStoreContainer" CdmEntityContainer="LibraryDataEntities1">
           <EntitySetMapping Name="Knygos">
             <EntityTypeMapping TypeName="LibraryDataModel.Knygo">
               <MappingFragment StoreEntitySet="Knygos">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Autorius" ColumnName="Autorius" />
                 <ScalarProperty Name="Pavadinimas" ColumnName="Pavadinimas" />
-                <ScalarProperty Name="Žmogus" ColumnName="Žmogus" />
-                <ScalarProperty Name="Grąžinimo_laikas" ColumnName="Grąžinimo laikas" />
+                <ScalarProperty Name="Zmogus" ColumnName="Zmogus" />
+                <ScalarProperty Name="Gražinimo_laikas" ColumnName="Gražinimo laikas" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Tables">
-            <EntityTypeMapping TypeName="LibraryDataModel.Table">
-              <MappingFragment StoreEntitySet="Table">
+          <EntitySetMapping Name="Vartotojais">
+            <EntityTypeMapping TypeName="LibraryDataModel.Vartotojai">
+              <MappingFragment StoreEntitySet="Vartotojai">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Prisijungimo_vardas" ColumnName="Prisijungimo vardas" />
-                <ScalarProperty Name="Slaptažodis" ColumnName="Slaptažodis" />
+                <ScalarProperty Name="Slaptazodis" ColumnName="Slaptazodis" />
                 <ScalarProperty Name="Vartotojas" ColumnName="Vartotojas" />
               </MappingFragment>
             </EntityTypeMapping>
