@@ -10,6 +10,7 @@ namespace Library
     {
         public string Username { get; set; }
         public string Password { get; set; }
+        public int PhoneNumber { get; set; }
         public int ID { get; set; }
         public int Vartotojas { get; set; }
     }
