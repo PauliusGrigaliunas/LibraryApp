@@ -34,15 +34,15 @@ namespace Library
             using (LibraryDataEntities contex = new LibraryDataEntities())
             {
                 int index = contex.Vartotojais.Count();
-                Vartotojai vartotojas = new Vartotojai()
+                Vartotojai vartotojass = new Vartotojai()
                 {
-                    Id = 1,
+                    Id = user.PhoneNumber,
                     Prisijungimo_vardas = user.Username,
                     Slaptazodis = user.Password,
                     Vartotojas = user.Vartotojas
 
                 };
-                contex.Vartotojais.Add(vartotojas);
+                contex.Vartotojais.Add(vartotojass);
                 contex.SaveChanges();
             }
             }
