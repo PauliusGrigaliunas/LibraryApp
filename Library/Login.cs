@@ -12,10 +12,10 @@ namespace Library
         public bool CheckData(String username, String password, int vartotojas)
         {
             bool exists = false;
-            using (KnygosEntities2 contex = new KnygosEntities2())
+            using (LibraryDataEntities1 contex = new LibraryDataEntities1())
             {
-                Vartotojai vartotojass = contex.Vartotojais.FirstOrDefault(r => r.Userame == username
-               && r.Password == password && r.Vartotojas == vartotojas);
+                Vartotojai vartotojass = contex.Vartotojais.FirstOrDefault(r => r.Prisijungimo_vardas == username
+               && r.Slaptazodis == password && r.Vartotojas == vartotojas);
 
                 if (vartotojass != null)
                 {
@@ -29,12 +29,12 @@ namespace Library
 
         public void FillData(String username, String password, int vartotojas)
         {
-            using (KnygosEntities2 contex = new KnygosEntities2())
+            using (LibraryDataEntities1 contex = new LibraryDataEntities1())
             {
                 Vartotojai vartotojass = new Vartotojai()
                 {
-                    Userame = username,
-                    Password = password,
+                    Prisijungimo_vardas = username,
+                    Slaptazodis = password,
                     Vartotojas = vartotojas,
 
                 };
@@ -46,9 +46,9 @@ namespace Library
         public static int GetID(string username)
         {
             int id;
-            using (KnygosEntities2 contex = new KnygosEntities2())
+            using (LibraryDataEntities1 contex = new LibraryDataEntities1())
             {
-                Vartotojai vartotojass = contex.Vartotojais.FirstOrDefault(r => r.Userame == username);
+                Vartotojai vartotojass = contex.Vartotojais.FirstOrDefault(r => r.Prisijungimo_vardas == username);
                     id = (int)vartotojass.Id;
             }
             return id;

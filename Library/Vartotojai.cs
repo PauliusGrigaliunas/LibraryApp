@@ -15,10 +15,8 @@ namespace Library
     public partial class Vartotojai
     {
         public int Id { get; set; }
-        public string Userame { get; set; }
-        public string Password { get; set; }
+        public string Prisijungimo_vardas { get; set; }
+        public string Slaptazodis { get; set; }
         public int Vartotojas { get; set; }
-    
-        public virtual Table Table { get; set; }
     }
 }
