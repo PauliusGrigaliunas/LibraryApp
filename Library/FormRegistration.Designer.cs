@@ -55,18 +55,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 54);
+            this.label1.Location = new System.Drawing.Point(21, 66);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Vartotojo Vardas ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 84);
+            this.label2.Location = new System.Drawing.Point(21, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(85, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Slaptažodis ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -74,9 +76,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 25);
+            this.label3.Location = new System.Drawing.Point(19, 31);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.Size = new System.Drawing.Size(138, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Privalomi duomenys:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -84,129 +87,146 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 151);
+            this.label4.Location = new System.Drawing.Point(21, 199);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 13);
+            this.label4.Size = new System.Drawing.Size(155, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Neprivalomi duomenys:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 183);
+            this.label5.Location = new System.Drawing.Point(21, 230);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Adresas";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 210);
+            this.label6.Location = new System.Drawing.Point(21, 272);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.Size = new System.Drawing.Size(86, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Pašto kodas";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 240);
+            this.label7.Location = new System.Drawing.Point(21, 311);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
+            this.label7.Size = new System.Drawing.Size(56, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "Miestas";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 271);
+            this.label8.Location = new System.Drawing.Point(21, 346);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 13);
+            this.label8.Size = new System.Drawing.Size(62, 17);
             this.label8.TabIndex = 7;
             this.label8.Text = "Valstybė";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 303);
+            this.label9.Location = new System.Drawing.Point(19, 387);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 13);
+            this.label9.Size = new System.Drawing.Size(146, 17);
             this.label9.TabIndex = 8;
             this.label9.Text = "Papildoma Informacija";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 333);
+            this.label10.Location = new System.Drawing.Point(21, 136);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 13);
+            this.label10.Size = new System.Drawing.Size(120, 17);
             this.label10.TabIndex = 9;
             this.label10.Text = "Telefono Numeris";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 51);
+            this.textBox1.Location = new System.Drawing.Point(179, 63);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 20);
+            this.textBox1.Size = new System.Drawing.Size(161, 22);
             this.textBox1.TabIndex = 10;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 81);
+            this.textBox2.Location = new System.Drawing.Point(179, 98);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 20);
+            this.textBox2.Size = new System.Drawing.Size(161, 22);
             this.textBox2.TabIndex = 11;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(134, 176);
+            this.textBox3.Location = new System.Drawing.Point(179, 225);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(122, 20);
+            this.textBox3.Size = new System.Drawing.Size(161, 22);
             this.textBox3.TabIndex = 12;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(134, 210);
+            this.textBox4.Location = new System.Drawing.Point(179, 272);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(122, 20);
+            this.textBox4.Size = new System.Drawing.Size(161, 22);
             this.textBox4.TabIndex = 13;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(134, 240);
+            this.textBox5.Location = new System.Drawing.Point(179, 311);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(122, 20);
+            this.textBox5.Size = new System.Drawing.Size(161, 22);
             this.textBox5.TabIndex = 14;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(134, 271);
+            this.textBox6.Location = new System.Drawing.Point(179, 346);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(122, 20);
+            this.textBox6.Size = new System.Drawing.Size(161, 22);
             this.textBox6.TabIndex = 15;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(132, 303);
+            this.textBox7.Location = new System.Drawing.Point(179, 387);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(122, 20);
+            this.textBox7.Size = new System.Drawing.Size(161, 22);
             this.textBox7.TabIndex = 16;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(132, 333);
+            this.textBox8.Location = new System.Drawing.Point(178, 136);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(122, 20);
+            this.textBox8.Size = new System.Drawing.Size(161, 22);
             this.textBox8.TabIndex = 17;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(20, 369);
+            this.button1.Location = new System.Drawing.Point(27, 454);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 25);
+            this.button1.Size = new System.Drawing.Size(181, 31);
             this.button1.TabIndex = 18;
             this.button1.Text = "Užsiregistruoti";
             this.button1.UseVisualStyleBackColor = true;
@@ -215,18 +235,20 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 111);
+            this.label11.Location = new System.Drawing.Point(30, 173);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 13);
+            this.label11.Size = new System.Drawing.Size(47, 17);
             this.label11.TabIndex = 19;
             this.label11.Text = "Tipas ";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(91, 111);
+            this.checkBox1.Location = new System.Drawing.Point(127, 173);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(77, 17);
+            this.checkBox1.Size = new System.Drawing.Size(98, 21);
             this.checkBox1.TabIndex = 20;
             this.checkBox1.Text = "Skaitytojas";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -234,18 +256,19 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(174, 111);
+            this.checkBox2.Location = new System.Drawing.Point(233, 173);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(83, 17);
+            this.checkBox2.Size = new System.Drawing.Size(107, 21);
             this.checkBox2.TabIndex = 21;
             this.checkBox2.Text = "Darbuotojas";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // FormRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 405);
+            this.ClientSize = new System.Drawing.Size(379, 498);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label11);
@@ -268,6 +291,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormRegistration";
             this.Text = "Registracijos forma";
             this.ResumeLayout(false);

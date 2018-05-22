@@ -8,14 +8,15 @@ namespace Library
 {
     class Login
     {
+        LibraryDataEntities2 entities2 = new LibraryDataEntities2();
 
-        public bool CheckData(String username, String password, int vartotojas)
+        public bool CheckData(string username, string password, int user)
         {
             bool exists = false;
-            using (LibraryDataEntities1 contex = new LibraryDataEntities1())
+            using (LibraryDataEntities2 contex = new LibraryDataEntities2())
             {
                 Vartotojai vartotojass = contex.Vartotojais.FirstOrDefault(r => r.Prisijungimo_vardas == username
-               && r.Slaptazodis == password && r.Vartotojas == vartotojas);
+               && r.Slaptazodis == password && r.Vartotojas == user);
 
                 if (vartotojass != null)
                 {
@@ -27,26 +28,37 @@ namespace Library
         }
 
 
-        public void FillData(String username, String password, int vartotojas)
+        public void FillData(User user)
         {
-            using (LibraryDataEntities1 contex = new LibraryDataEntities1())
+            try
             {
+            using (LibraryDataEntities2 contex = new LibraryDataEntities2())
+            {
+                int index = contex.Vartotojais.Count();
                 Vartotojai vartotojass = new Vartotojai()
                 {
-                    Prisijungimo_vardas = username,
-                    Slaptazodis = password,
-                    Vartotojas = vartotojas,
+                    Id = user.PhoneNumber,
+                    Prisijungimo_vardas = user.Username,
+                    Slaptazodis = user.Password,
+                    Vartotojas = user.Vartotojas
 
                 };
                 contex.Vartotojais.Add(vartotojass);
                 contex.SaveChanges();
             }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         public static int GetID(string username)
         {
             int id;
-            using (LibraryDataEntities1 contex = new LibraryDataEntities1())
+            using (LibraryDataEntities2 contex = new LibraryDataEntities2())
             {
                 Vartotojai vartotojass = contex.Vartotojais.FirstOrDefault(r => r.Prisijungimo_vardas == username);
                     id = (int)vartotojass.Id;

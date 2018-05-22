@@ -40,13 +40,15 @@ namespace Library
             {
                 user.Vartotojas = 0;
             }
-           user.Username= textBox1.Text;
-           user.Password= textBox2.Text;
-           login.FillData(user.Username, user.Password, user.Vartotojas);
+
+           user.Username = textBox1.Text;
+           user.Password = textBox2.Text;
+           user.PhoneNumber = Int32.Parse(textBox8.Text);
+
+            login.FillData(user);
             MessageBox.Show("Sekimgai įrašyta");
             ShowDialogs();
-            
-          
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -77,6 +79,11 @@ namespace Library
                 Darbuotojas.ShowDialog();
                 this.Show();
             }
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

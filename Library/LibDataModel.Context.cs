@@ -13,9 +13,9 @@ namespace Library
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LibraryDataEntities1 : DbContext
+    public partial class LibraryDataEntities : DbContext
     {
-        public LibraryDataEntities1()
+        public LibraryDataEntities()
             : base("name=LibraryDataEntities1")
         {
         }
