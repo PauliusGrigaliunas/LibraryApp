@@ -8,11 +8,12 @@ namespace Library
 {
     class Login
     {
+        LibraryDataEntities2 entities2 = new LibraryDataEntities2();
 
-        public bool CheckData(String username, String password, int user)
+        public bool CheckData(string username, string password, int user)
         {
             bool exists = false;
-            using (LibraryDataEntities contex = new LibraryDataEntities())
+            using (LibraryDataEntities2 contex = new LibraryDataEntities2())
             {
                 Vartotojai vartotojass = contex.Vartotojais.FirstOrDefault(r => r.Prisijungimo_vardas == username
                && r.Slaptazodis == password && r.Vartotojas == user);
@@ -31,7 +32,7 @@ namespace Library
         {
             try
             {
-            using (LibraryDataEntities contex = new LibraryDataEntities())
+            using (LibraryDataEntities2 contex = new LibraryDataEntities2())
             {
                 int index = contex.Vartotojais.Count();
                 Vartotojai vartotojass = new Vartotojai()
@@ -57,7 +58,7 @@ namespace Library
         public static int GetID(string username)
         {
             int id;
-            using (LibraryDataEntities contex = new LibraryDataEntities())
+            using (LibraryDataEntities2 contex = new LibraryDataEntities2())
             {
                 Vartotojai vartotojass = contex.Vartotojais.FirstOrDefault(r => r.Prisijungimo_vardas == username);
                     id = (int)vartotojass.Id;

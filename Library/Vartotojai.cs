@@ -18,6 +18,5 @@ namespace Library
         public string Prisijungimo_vardas { get; set; }
         public string Slaptazodis { get; set; }
         public int Vartotojas { get; set; }
-
     }
 }

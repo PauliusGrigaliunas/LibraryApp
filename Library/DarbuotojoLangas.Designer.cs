@@ -208,10 +208,7 @@
 
         #endregion
 
-        private KnygosDataSet1 knygosDataSet1;
         private System.Windows.Forms.BindingSource tableBindingSource;
-        private KnygosDataSet1TableAdapters.TableTableAdapter tableTableAdapter;
-        private KnygosDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView tableDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
