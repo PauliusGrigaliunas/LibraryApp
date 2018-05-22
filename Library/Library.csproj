@@ -85,11 +85,6 @@
     <Compile Include="Knygo.cs">
       <DependentUpon>Library.tt</DependentUpon>
     </Compile>
-    <Compile Include="KnygosDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KnygosDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="KnygosDataSet1.cs">
       <DependentUpon>KnygosDataSet1.xsd</DependentUpon>
     </Compile>
@@ -193,17 +188,6 @@
     <EmbeddedResource Include="SkaitytojoLangas.resx">
       <DependentUpon>SkaitytojoLangas.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="KnygosDataSet.xsc">
-      <DependentUpon>KnygosDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="KnygosDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>KnygosDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="KnygosDataSet.xss">
-      <DependentUpon>KnygosDataSet.xsd</DependentUpon>
-    </None>
     <None Include="KnygosDataSet1.xsc">
       <DependentUpon>KnygosDataSet1.xsd</DependentUpon>
     </None>

@@ -24,7 +24,7 @@ namespace Library
         private void DarbuotojoLangas_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'knygosDataSet1.Table' table. You can move, or remove it, as needed.
-            this.tableTableAdapter.Fill(this.knygosDataSet1.Table);
+            tableTableAdapter.Fill(knygosDataSet1.Table);
 
         }
 
@@ -32,9 +32,9 @@ namespace Library
         {
             try
             {
-                this.Validate();
-                this.tableBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.knygosDataSet1);
+                Validate();
+                tableBindingSource.EndEdit();
+                tableAdapterManager.UpdateAll(knygosDataSet1);
             }
             catch (Exception ex)
             {
@@ -87,8 +87,8 @@ namespace Library
 
         private void updateTable()
         {
-            this.tableTableAdapter.Update(knygosDataSet1);
-            this.tableTableAdapter.Fill(this.knygosDataSet1.Table);
+            tableTableAdapter.Update(knygosDataSet1);
+            tableTableAdapter.Fill(knygosDataSet1.Table);
         }
     }
 }
