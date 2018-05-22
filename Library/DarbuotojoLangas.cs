@@ -24,7 +24,7 @@ namespace Library
         private void DarbuotojoLangas_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'knygosDataSet1.Table' table. You can move, or remove it, as needed.
-            tableTableAdapter.Fill(knygosDataSet1.Table);
+            //tableTableAdapter.Fill(knygosDataSet1.Table);
 
         }
 
@@ -75,8 +75,9 @@ namespace Library
         {
             String autorius = textBoxAutorius.Text;
             String pavadinimas = textBoxPavadinimas.Text;
-            dbman.add(knygosDataSet1, autorius, pavadinimas);
-            updateTable();
+            dbman.AddBook(autorius, pavadinimas);
+            //dbman.add(knygosDataSet1, autorius, pavadinimas);
+            //updateTable();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)

@@ -44,8 +44,6 @@ C:\Users\Emilija.DELL-EMILIJOS\Documents\Github\Library\Library\bin\Debug\Entity
 C:\Users\Emilija.DELL-EMILIJOS\Documents\Github\Library\Library\bin\Debug\EntityFramework.xml
 C:\Users\Emilija.DELL-EMILIJOS\Documents\Github\Library\Library\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Emilija.DELL-EMILIJOS\Documents\Github\Library\Library\obj\Debug\Library.FormRegistration.resources
-C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\Knygos.mdf
-C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\Knygos_log.ldf
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\Library.exe.config
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\Library.exe
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\Library.pdb

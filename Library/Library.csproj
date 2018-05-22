@@ -83,7 +83,7 @@
       <DependentUpon>FormRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Knygo.cs">
-      <DependentUpon>Library.tt</DependentUpon>
+      <DependentUpon>LibraryModel.tt</DependentUpon>
     </Compile>
     <Compile Include="KnygosDataSet1.cs">
       <DependentUpon>KnygosDataSet1.xsd</DependentUpon>
@@ -99,56 +99,23 @@
     <Compile Include="KurjerioForma.Designer.cs">
       <DependentUpon>KurjerioForma.cs</DependentUpon>
     </Compile>
-    <Compile Include="LibDataModel.Context.cs">
+    <Compile Include="LibraryModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LibDataModel.Context.tt</DependentUpon>
+      <DependentUpon>LibraryModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="LibDataModel.cs">
+    <Compile Include="LibraryModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LibDataModel.tt</DependentUpon>
+      <DependentUpon>LibraryModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="LibDataModel.Designer.cs">
+    <Compile Include="LibraryModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LibDataModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Library.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Library.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Library.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Library.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Library.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Library.edmx</DependentUpon>
+      <DependentUpon>LibraryModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
-    <Compile Include="ModelKnygoss.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelKnygoss.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelKnygoss.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelKnygoss.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelKnygoss.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelKnygoss.edmx</DependentUpon>
-    </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="Vartotojai.cs">
-      <DependentUpon>Library.tt</DependentUpon>
-    </Compile>
     <Compile Include="SkaitytojoLangas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +130,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vartotojai.cs">
+      <DependentUpon>LibraryModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DarbuotojoLangas.resx">
       <DependentUpon>DarbuotojoLangas.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,19 +169,12 @@
     <None Include="KnygosDataSet1.xss">
       <DependentUpon>KnygosDataSet1.xsd</DependentUpon>
     </None>
-    <EntityDeploy Include="LibDataModel.edmx">
+    <EntityDeploy Include="LibraryModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>LibDataModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>LibraryModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="LibDataModel.edmx.diagram">
-      <DependentUpon>LibDataModel.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="Library.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Library.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Library.edmx.diagram">
-      <DependentUpon>Library.edmx</DependentUpon>
+    <None Include="LibraryModel.edmx.diagram">
+      <DependentUpon>LibraryModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
@@ -225,13 +188,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="ModelKnygoss.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelKnygoss.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ModelKnygoss.edmx.diagram">
-      <DependentUpon>ModelKnygoss.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -249,47 +205,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Knygos.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Knygos_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Knygos.mdf</DependentUpon>
-    </Content>
-    <Content Include="LibDataModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LibDataModel.edmx</DependentUpon>
-      <LastGenOutput>LibDataModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="LibDataModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LibDataModel.edmx</DependentUpon>
-      <LastGenOutput>LibDataModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="Library.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Library.edmx</DependentUpon>
-      <LastGenOutput>Library.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Library.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Library.edmx</DependentUpon>
-      <LastGenOutput>Library.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelKnygoss.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelKnygoss.edmx</DependentUpon>
-      <LastGenOutput>ModelKnygoss.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelKnygoss.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelKnygoss.edmx</DependentUpon>
-      <LastGenOutput>ModelKnygoss.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\knyga.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LibraryModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryModel.edmx</DependentUpon>
+      <LastGenOutput>LibraryModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="LibraryModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryModel.edmx</DependentUpon>
+      <LastGenOutput>LibraryModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
