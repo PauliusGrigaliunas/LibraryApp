@@ -52,7 +52,7 @@ namespace Library
                 label1.Text = "Mokama suma: " + dbman.baudosDydis(grazinimoData).ToString() + " €";
             }
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -78,19 +78,22 @@ namespace Library
             String pavadinimas = textBoxPavadinimas.Text;
             dbman.AddBook(autorius, pavadinimas);
             //dbman.add(knygosDataSet1, autorius, pavadinimas);
-            //updateTable();
+            updateTable();
         }
-
+        
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            dbman.delete(knygosDataSet1, 0);
+            int id = Int32.Parse(knygosDataGridView.SelectedCells[0].OwningRow.Cells[0].Value.ToString());
+
+            dbman.delete(knygosDataSet1, id);
             updateTable();
+   
         }
 
         private void updateTable()
         {
-            tableTableAdapter.Update(knygosDataSet1);
-            tableTableAdapter.Fill(knygosDataSet1.Table);
+            knygosTableAdapter.Update(libraryDataDataSet1.Knygos);
+            knygosTableAdapter.Fill(libraryDataDataSet1.Knygos);
         }
 
         private void knygosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

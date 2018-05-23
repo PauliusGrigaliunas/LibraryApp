@@ -73,7 +73,20 @@ namespace Library
 
         public void delete(KnygosDataSet1 dataSet, int n)
         {
-            dataSet.Table.Rows.Remove(dataSet.Table[n]);
+
+            //dataSet.Table.Rows.Remove(dataSet.Table[n]);
+
+            using (LibraryDataEntities2 dataEntities = new LibraryDataEntities2())
+            {
+                Knygo knygo = (from c in dataEntities.Knygos
+                               where c.Id == n
+                               select c).FirstOrDefault();
+
+
+                dataEntities.Knygos.Remove(knygo);
+                dataEntities.SaveChanges();
+
+            }
         }
 
         public void take(KnygosDataSet1 dataSet, int n, int ID)

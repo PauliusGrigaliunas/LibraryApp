@@ -60,7 +60,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(633, 336);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 12;
@@ -80,7 +80,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(499, 336);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 14;
@@ -91,7 +91,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(128, 639);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 15;
@@ -102,7 +102,7 @@
             // textBoxAutorius
             // 
             this.textBoxAutorius.Location = new System.Drawing.Point(45, 526);
-            this.textBoxAutorius.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxAutorius.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAutorius.Name = "textBoxAutorius";
             this.textBoxAutorius.Size = new System.Drawing.Size(279, 22);
             this.textBoxAutorius.TabIndex = 16;
@@ -111,7 +111,7 @@
             // textBoxPavadinimas
             // 
             this.textBoxPavadinimas.Location = new System.Drawing.Point(45, 582);
-            this.textBoxPavadinimas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPavadinimas.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPavadinimas.Name = "textBoxPavadinimas";
             this.textBoxPavadinimas.Size = new System.Drawing.Size(279, 22);
             this.textBoxPavadinimas.TabIndex = 17;
@@ -120,7 +120,7 @@
             // deleteButton
             // 
             this.deleteButton.Location = new System.Drawing.Point(425, 15);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(100, 28);
             this.deleteButton.TabIndex = 18;
@@ -162,8 +162,9 @@
             this.knygosDataGridView.DataSource = this.knygosBindingSource;
             this.knygosDataGridView.Location = new System.Drawing.Point(0, 50);
             this.knygosDataGridView.Name = "knygosDataGridView";
+            this.knygosDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.knygosDataGridView.RowTemplate.Height = 24;
-            this.knygosDataGridView.Size = new System.Drawing.Size(762, 279);
+            this.knygosDataGridView.Size = new System.Drawing.Size(748, 279);
             this.knygosDataGridView.TabIndex = 18;
             this.knygosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.knygosDataGridView_CellContentClick);
             // 
@@ -230,7 +231,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DarbuotojoLangas";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.DarbuotojoLangas_Load);
