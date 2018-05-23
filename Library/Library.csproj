@@ -99,6 +99,9 @@
     <Compile Include="KurjerioForma.Designer.cs">
       <DependentUpon>KurjerioForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibraryDataDataSet.cs">
+      <DependentUpon>LibraryDataDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LibraryDataDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

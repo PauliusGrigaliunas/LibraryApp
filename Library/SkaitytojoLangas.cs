@@ -25,7 +25,11 @@ namespace Library
 
         private void SkaitytojoLangas_Load(object sender, EventArgs e)
         {
-            tableTableAdapter.FillByZmogus(this.knygosDataSet1.Table);
+            // TODO: This line of code loads data into the 'libraryDataDataSet.Knygos' table. You can move, or remove it, as needed.
+           knygosTableAdapter.Fill(libraryDataDataSet.Knygos);
+
+
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -35,21 +39,21 @@ namespace Library
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dbman.take(knygosDataSet1, dataGridView1.CurrentCell.RowIndex, user.ID);
+            dbman.take(knygosDataSet1, knygosDataGridView.CurrentCell.RowIndex, user.ID);
             updateTable();
         }
 
         private void updateTable()
         {
-            this.tableTableAdapter.Update(knygosDataSet1);
-            this.tableTableAdapter.FillByZmogus(this.knygosDataSet1.Table);
+            knygosTableAdapter.Update(libraryDataDataSet);
+           // knygosTableAdapter.FillByZmogus(this.knygosDataSet1.Table);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                this.tableTableAdapter.FillByPavadinimas(this.knygosDataSet1.Table, "%" + textBox2.Text + "%");
+                knygosTableAdapter.FillByAuthorOrBook(libraryDataDataSet.Knygos, textBox2.Text);
             }
             catch (System.Exception ex)
             {
@@ -62,7 +66,7 @@ namespace Library
 
             KurjerioForma Kurjeris = new KurjerioForma();
             Kurjeris.ShowDialog();
-            dbman.take(knygosDataSet1, dataGridView1.CurrentCell.RowIndex, user.ID);
+            dbman.take(knygosDataSet1, knygosDataGridView.CurrentCell.RowIndex, user.ID);
             updateTable();
         }
     }
