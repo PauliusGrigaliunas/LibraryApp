@@ -47,11 +47,46 @@ namespace Library
             anyRow[2] = pavadinimas;
             anyRow[3] = 0;
             dataSet.Table.Rows.Add(anyRow);
+
+
+        }
+
+
+        public void AddBook(String autorius, String pavadinimas) {
+            using (LibraryDataEntities2 dataEntities = new LibraryDataEntities2())
+            {
+                List<int> idList = dataEntities.Knygos.Select(x => x.Id).ToList();
+
+                Knygo knygo = new Knygo()
+                {
+                    Id = idList.Last() + 1,
+                    Autorius = autorius,
+                    Pavadinimas = pavadinimas
+
+                };
+
+                dataEntities.Knygos.Add(knygo);
+                dataEntities.SaveChanges();
+
+            }
         }
 
         public void delete(KnygosDataSet1 dataSet, int n)
         {
-            dataSet.Table.Rows.Remove(dataSet.Table[n]);
+
+            //dataSet.Table.Rows.Remove(dataSet.Table[n]);
+
+            using (LibraryDataEntities2 dataEntities = new LibraryDataEntities2())
+            {
+                Knygo knygo = (from c in dataEntities.Knygos
+                               where c.Id == n
+                               select c).FirstOrDefault();
+
+
+                dataEntities.Knygos.Remove(knygo);
+                dataEntities.SaveChanges();
+
+            }
         }
 
         public void take(KnygosDataSet1 dataSet, int n, int ID)

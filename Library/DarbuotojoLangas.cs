@@ -23,8 +23,9 @@ namespace Library
 
         private void DarbuotojoLangas_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'knygosDataSet1.Table' table. You can move, or remove it, as needed.
-            this.tableTableAdapter.Fill(this.knygosDataSet1.Table);
+            // TODO: This line of code loads data into the 'libraryDataDataSet1.Knygos' table. You can move, or remove it, as needed.
+            knygosTableAdapter.Fill(this.libraryDataDataSet1.Knygos);
+
 
         }
 
@@ -32,9 +33,9 @@ namespace Library
         {
             try
             {
-                this.Validate();
-                this.tableBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.knygosDataSet1);
+                Validate();
+                tableBindingSource.EndEdit();
+                tableAdapterManager.UpdateAll(knygosDataSet1);
             }
             catch (Exception ex)
             {
@@ -44,18 +45,18 @@ namespace Library
 
         private void tableDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (knygosDataSet1.Table[tableDataGridView.CurrentCell.RowIndex][4].Equals(DBNull.Value)) { label1.Text = ""; }
+            if (knygosDataSet1.Table[knygosDataGridView.CurrentCell.RowIndex][4].Equals(DBNull.Value)) { label1.Text = ""; }
             else
             {
-                DateTime grazinimoData = (DateTime)knygosDataSet1.Table[tableDataGridView.CurrentCell.RowIndex][4];
+                DateTime grazinimoData = (DateTime)knygosDataSet1.Table[knygosDataGridView.CurrentCell.RowIndex][4];
                 label1.Text = "Mokama suma: " + dbman.baudosDydis(grazinimoData).ToString() + " €";
             }
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
 
-            dbman.remove(knygosDataSet1, tableDataGridView.CurrentCell.RowIndex);
+            dbman.remove(knygosDataSet1, knygosDataGridView.CurrentCell.RowIndex);
             updateTable();
         }
 
@@ -63,7 +64,7 @@ namespace Library
         {
             try
             {
-                dbman.extend(knygosDataSet1, tableDataGridView.CurrentCell.RowIndex);
+                dbman.extend(knygosDataSet1, knygosDataGridView.CurrentCell.RowIndex);
             }catch(Exception exc)
             {
                 label1.Text = exc.Message;
@@ -75,20 +76,29 @@ namespace Library
         {
             String autorius = textBoxAutorius.Text;
             String pavadinimas = textBoxPavadinimas.Text;
-            dbman.add(knygosDataSet1, autorius, pavadinimas);
+            dbman.AddBook(autorius, pavadinimas);
+            //dbman.add(knygosDataSet1, autorius, pavadinimas);
             updateTable();
         }
-
+        
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            dbman.delete(knygosDataSet1, 0);
+            int id = Int32.Parse(knygosDataGridView.SelectedCells[0].OwningRow.Cells[0].Value.ToString());
+
+            dbman.delete(knygosDataSet1, id);
             updateTable();
+   
         }
 
         private void updateTable()
         {
-            this.tableTableAdapter.Update(knygosDataSet1);
-            this.tableTableAdapter.Fill(this.knygosDataSet1.Table);
+            knygosTableAdapter.Update(libraryDataDataSet1.Knygos);
+            knygosTableAdapter.Fill(libraryDataDataSet1.Knygos);
+        }
+
+        private void knygosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

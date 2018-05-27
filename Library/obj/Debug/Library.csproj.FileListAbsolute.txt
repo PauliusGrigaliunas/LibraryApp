@@ -44,8 +44,6 @@ C:\Users\Emilija.DELL-EMILIJOS\Documents\Github\Library\Library\bin\Debug\Entity
 C:\Users\Emilija.DELL-EMILIJOS\Documents\Github\Library\Library\bin\Debug\EntityFramework.xml
 C:\Users\Emilija.DELL-EMILIJOS\Documents\Github\Library\Library\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Emilija.DELL-EMILIJOS\Documents\Github\Library\Library\obj\Debug\Library.FormRegistration.resources
-C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\Knygos.mdf
-C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\Knygos_log.ldf
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\Library.exe.config
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\Library.exe
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\Library.pdb
@@ -53,7 +51,6 @@ C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\EntityFramework.d
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\EntityFramework.xml
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\obj\Debug\Library.csprojResolveAssemblyReference.cache
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\obj\Debug\Library.DarbuotojoLangas.resources
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\obj\Debug\Library.Form1.resources
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\obj\Debug\Library.FormRegistration.resources
@@ -64,3 +61,5 @@ C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\obj\Debug\Library.csproj.Ge
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\obj\Debug\Library.csproj.CoreCompileInputs.cache
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\obj\Debug\Library.exe
 C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\obj\Debug\Library.pdb
+C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\obj\Debug\Library.csprojAssemblyReference.cache
+C:\Users\Paulius\Documents\GitHub\LibraryApp\Library\obj\Debug\Library.csproj.CopyComplete

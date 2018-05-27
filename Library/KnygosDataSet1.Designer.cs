@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Library {
     
     
@@ -1217,6 +1219,7 @@ SELECT Id, Autorius, Pavadinimas, Zmogus, [Grazinimo Laikas] FROM [Table] WHERE 
         public virtual int Update(string Autorius, string Pavadinimas, global::System.Nullable<int> Zmogus, global::System.Nullable<global::System.DateTime> Grazinimo_Laikas, int Original_Id, string Original_Autorius, string Original_Pavadinimas, global::System.Nullable<int> Original_Zmogus, global::System.Nullable<global::System.DateTime> Original_Grazinimo_Laikas) {
             return this.Update(Original_Id, Autorius, Pavadinimas, Zmogus, Grazinimo_Laikas, Original_Id, Original_Autorius, Original_Pavadinimas, Original_Zmogus, Original_Grazinimo_Laikas);
         }
+
     }
     
     /// <summary>
