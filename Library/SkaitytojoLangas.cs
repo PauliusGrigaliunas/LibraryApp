@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,9 +27,34 @@ namespace Library
         private void SkaitytojoLangas_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'libraryDataDataSet.Knygos' table. You can move, or remove it, as needed.
-           knygosTableAdapter.Fill(libraryDataDataSet.Knygos);
+            //knygosTableAdapter.Fill(libraryDataDataSet.Knygos);
+
+            using (LibraryDataEntities2 dataEntities = new LibraryDataEntities2())
+            {
+
+                Knygo[] knygo = (from c in dataEntities.Knygos
+                                 where !c.Zmogus.HasValue
+                                 select c).ToArray();
+
+                knygosDataGridView.DataSource = knygo;
+
+            }
 
 
+            using (LibraryDataEntities2 dataEntities = new LibraryDataEntities2())
+            {
+
+                Knygo[] knygo = (from c in dataEntities.Knygos
+                               from b in dataEntities.Vartotojais
+                               where c.Zmogus == b.Id
+                               select c).ToArray();
+
+                knygosDataGridView1.DataSource = knygo;
+
+            }
+
+
+            
 
         }
 
@@ -68,6 +94,16 @@ namespace Library
             Kurjeris.ShowDialog();
             dbman.take(knygosDataSet1, knygosDataGridView.CurrentCell.RowIndex, user.ID);
             updateTable();
+        }
+
+        private void knygosDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void knygosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

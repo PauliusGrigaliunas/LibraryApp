@@ -80,7 +80,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(579, 319);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 1;
@@ -121,7 +121,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(579, 60);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 4;
@@ -151,7 +151,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(579, 379);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 28);
             this.button2.TabIndex = 7;
@@ -194,6 +194,7 @@
             this.knygosDataGridView.RowTemplate.Height = 24;
             this.knygosDataGridView.Size = new System.Drawing.Size(556, 395);
             this.knygosDataGridView.TabIndex = 7;
+            this.knygosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.knygosDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -228,6 +229,7 @@
             this.knygosDataGridView1.RowTemplate.Height = 24;
             this.knygosDataGridView1.Size = new System.Drawing.Size(556, 220);
             this.knygosDataGridView1.TabIndex = 7;
+            this.knygosDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.knygosDataGridView1_CellContentClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -257,7 +259,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 710);
+            this.ClientSize = new System.Drawing.Size(1000, 710);
             this.Controls.Add(this.knygosDataGridView1);
             this.Controls.Add(this.knygosDataGridView);
             this.Controls.Add(this.button2);
@@ -265,7 +267,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SkaitytojoLangas";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.SkaitytojoLangas_Load);
