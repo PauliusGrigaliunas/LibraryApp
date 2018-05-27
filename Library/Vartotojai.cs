@@ -14,9 +14,18 @@ namespace Library
     
     public partial class Vartotojai
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Vartotojai()
+        {
+            this.Egzempliorius = new HashSet<Egzemplioriu>();
+        }
+    
         public int Id { get; set; }
         public string Prisijungimo_vardas { get; set; }
         public string Slaptazodis { get; set; }
         public int Vartotojas { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Egzemplioriu> Egzempliorius { get; set; }
     }
 }

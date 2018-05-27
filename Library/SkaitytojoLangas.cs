@@ -26,35 +26,36 @@ namespace Library
 
         private void SkaitytojoLangas_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'libraryDataSet.Knygos' table. You can move, or remove it, as needed.
+            this.knygosTableAdapter1.Fill(this.libraryDataSet.Knygos);
             // TODO: This line of code loads data into the 'libraryDataDataSet.Knygos' table. You can move, or remove it, as needed.
             //knygosTableAdapter.Fill(libraryDataDataSet.Knygos);
 
-            using (LibraryDataEntities2 dataEntities = new LibraryDataEntities2())
+            using (LibraryDataEntities3 dataEntities = new LibraryDataEntities3())
             {
 
                 Knygo[] knygo = (from c in dataEntities.Knygos
-                                 where !c.Zmogus.HasValue
-                                 select c).ToArray();
+                                 from b in dataEntities.Egzempliorius
+                                 where c.Isbn == b.Isbn && !b.Skaitytojas.HasValue
+                                 select c).Distinct().ToArray();
 
                 knygosDataGridView.DataSource = knygo;
 
             }
 
 
-            using (LibraryDataEntities2 dataEntities = new LibraryDataEntities2())
+            using (LibraryDataEntities3 dataEntities = new LibraryDataEntities3())
             {
 
                 Knygo[] knygo = (from c in dataEntities.Knygos
-                               from b in dataEntities.Vartotojais
-                               where c.Zmogus == b.Id
+                                 from a in dataEntities.Egzempliorius
+                                 from b in dataEntities.Vartotojais
+                               where c.Isbn == a.Isbn && a.Skaitytojas == b.Id
                                select c).ToArray();
 
                 knygosDataGridView1.DataSource = knygo;
 
             }
-
-
-            
 
         }
 
@@ -102,6 +103,11 @@ namespace Library
         }
 
         private void knygosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void knygosDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

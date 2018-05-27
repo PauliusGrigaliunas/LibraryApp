@@ -14,10 +14,19 @@ namespace Library
     
     public partial class Knygo
     {
-        public int Id { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Knygo()
+        {
+            this.Egzempliorius = new HashSet<Egzemplioriu>();
+        }
+    
+        public int Isbn { get; set; }
         public string Autorius { get; set; }
         public string Pavadinimas { get; set; }
-        public Nullable<int> Zmogus { get; set; }
-        public Nullable<System.DateTime> Gražinimo_laikas { get; set; }
+        public string Leidykla { get; set; }
+        public Nullable<System.DateTime> Metai { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Egzemplioriu> Egzempliorius { get; set; }
     }
 }

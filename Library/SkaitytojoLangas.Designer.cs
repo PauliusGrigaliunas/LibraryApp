@@ -46,15 +46,21 @@
             this.knygosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.knygosTableAdapter = new Library.LibraryDataDataSetTableAdapters.KnygosTableAdapter();
             this.tableAdapterManager1 = new Library.LibraryDataDataSetTableAdapters.TableAdapterManager();
+            this.libraryDataSet = new Library.LibraryDataSet();
+            this.knygosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.knygosTableAdapter1 = new Library.LibraryDataSetTableAdapters.KnygosTableAdapter();
+            this.tableAdapterManager2 = new Library.LibraryDataSetTableAdapters.TableAdapterManager();
             this.knygosDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.knygosDataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.knygosDataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kiekis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knygosDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
@@ -63,6 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knygosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.knygosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knygosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knygosDataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -180,27 +188,85 @@
             this.tableAdapterManager1.UpdateOrder = Library.LibraryDataDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.VartotojaiTableAdapter = null;
             // 
+            // libraryDataSet
+            // 
+            this.libraryDataSet.DataSetName = "LibraryDataSet";
+            this.libraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // knygosBindingSource1
+            // 
+            this.knygosBindingSource1.DataMember = "Knygos";
+            this.knygosBindingSource1.DataSource = this.libraryDataSet;
+            // 
+            // knygosTableAdapter1
+            // 
+            this.knygosTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager2
+            // 
+            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager2.EgzemplioriusTableAdapter = null;
+            this.tableAdapterManager2.KnygosTableAdapter = this.knygosTableAdapter1;
+            this.tableAdapterManager2.UpdateOrder = Library.LibraryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager2.VartotojaiTableAdapter = null;
+            // 
             // knygosDataGridView
             // 
             this.knygosDataGridView.AutoGenerateColumns = false;
             this.knygosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.knygosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.knygosDataGridView.DataSource = this.knygosBindingSource;
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.Kiekis});
+            this.knygosDataGridView.DataSource = this.knygosBindingSource1;
             this.knygosDataGridView.Location = new System.Drawing.Point(12, 12);
             this.knygosDataGridView.Name = "knygosDataGridView";
             this.knygosDataGridView.RowTemplate.Height = 24;
-            this.knygosDataGridView.Size = new System.Drawing.Size(556, 395);
+            this.knygosDataGridView.Size = new System.Drawing.Size(556, 405);
             this.knygosDataGridView.TabIndex = 7;
-            this.knygosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.knygosDataGridView_CellContentClick);
+            this.knygosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.knygosDataGridView_CellContentClick_1);
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Autorius";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Autorius";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Pavadinimas";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Pavadinimas";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Leidykla";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Leidykla";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Metai";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Metai";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // knygosDataGridView1
+            // 
+            this.knygosDataGridView1.AutoGenerateColumns = false;
+            this.knygosDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.knygosDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.knygosDataGridView1.DataSource = this.knygosBindingSource1;
+            this.knygosDataGridView1.Location = new System.Drawing.Point(12, 423);
+            this.knygosDataGridView1.Name = "knygosDataGridView1";
+            this.knygosDataGridView1.RowTemplate.Height = 24;
+            this.knygosDataGridView1.Size = new System.Drawing.Size(556, 283);
+            this.knygosDataGridView1.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -214,52 +280,29 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Pavadinimas";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // knygosDataGridView1
-            // 
-            this.knygosDataGridView1.AutoGenerateColumns = false;
-            this.knygosDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.knygosDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn8});
-            this.knygosDataGridView1.DataSource = this.knygosBindingSource;
-            this.knygosDataGridView1.Location = new System.Drawing.Point(12, 437);
-            this.knygosDataGridView1.Name = "knygosDataGridView1";
-            this.knygosDataGridView1.RowTemplate.Height = 24;
-            this.knygosDataGridView1.Size = new System.Drawing.Size(556, 220);
-            this.knygosDataGridView1.TabIndex = 7;
-            this.knygosDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.knygosDataGridView1_CellContentClick);
-            // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Leidykla";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Leidykla";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Autorius";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Autorius";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Metai";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Metai";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // dataGridViewTextBoxColumn6
+            // Kiekis
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Pavadinimas";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Pavadinimas";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Gražinimo laikas";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Gražinimo laikas";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.Kiekis.DataPropertyName = "Id";
+            this.Kiekis.HeaderText = "Kiekis";
+            this.Kiekis.Name = "Kiekis";
             // 
             // SkaitytojoLangas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 710);
+            this.ClientSize = new System.Drawing.Size(1034, 710);
             this.Controls.Add(this.knygosDataGridView1);
             this.Controls.Add(this.knygosDataGridView);
             this.Controls.Add(this.button2);
@@ -279,6 +322,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knygosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.knygosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knygosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knygosDataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -306,14 +351,20 @@
         private System.Windows.Forms.BindingSource knygosBindingSource;
         private LibraryDataDataSetTableAdapters.KnygosTableAdapter knygosTableAdapter;
         private LibraryDataDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private LibraryDataSet libraryDataSet;
+        private System.Windows.Forms.BindingSource knygosBindingSource1;
+        private LibraryDataSetTableAdapters.KnygosTableAdapter knygosTableAdapter1;
+        private LibraryDataSetTableAdapters.TableAdapterManager tableAdapterManager2;
         private System.Windows.Forms.DataGridView knygosDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kiekis;
+        private System.Windows.Forms.DataGridView knygosDataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridView knygosDataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

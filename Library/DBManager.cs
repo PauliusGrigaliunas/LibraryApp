@@ -55,11 +55,11 @@ namespace Library
         public void AddBook(String autorius, String pavadinimas) {
             using (LibraryDataEntities2 dataEntities = new LibraryDataEntities2())
             {
-                List<int> idList = dataEntities.Knygos.Select(x => x.Id).ToList();
+                List<int> idList = dataEntities.Knygos.Select(x => x.Isbn).ToList();
 
                 Knygo knygo = new Knygo()
                 {
-                    Id = idList.Last() + 1,
+                    Isbn = idList.Last() + 1,
                     Autorius = autorius,
                     Pavadinimas = pavadinimas
 
@@ -79,7 +79,7 @@ namespace Library
             using (LibraryDataEntities2 dataEntities = new LibraryDataEntities2())
             {
                 Knygo knygo = (from c in dataEntities.Knygos
-                               where c.Id == n
+                               where c.Isbn == n
                                select c).FirstOrDefault();
 
 
